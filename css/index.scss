@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+img {
+    border: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+@mixin user($size) {
+    $list: 2048px,1920px,1440px,1600px,1242px,1140px,1280px,1024px,1080px,960px,800px,768px,736px,732px,720px,667px,640px,600px,568px,540px,533px,480px,435px,414px,412px,400px,385px,384px,375px, 360px,320px,300px,240px;
+    @each $i in $list {
+        @media screen and(max-width: #{$i}) {
+            html {
+                font-size: 100px * ($i/$size);
+            }
+        }
+    }
+}
+@include user(750px);
+body {
+    font-size: 16px;
+    background: url('../img/图层-1.png') no-repeat;
+    background-size: cover;
+}
+.divs {
+    width: 100%;
+    height: auto;
+    .header {
+        height: 1.17rem;
+        .hdr {
+            width: 100%;
+            height: 100%;
+            padding-top: 0.53rem;
+            box-sizing: border-box;
+            .navf {
+                width: 5.76rem;
+                height: 1.18rem;
+                background: url('../img/标题.png') no-repeat;
+                background-size: 100%;
+                margin-left: 0.2rem;
+            }
+        }
+    }
+}
+.divs2{
+    width:100%;
+    height: auto;
+    margin-top: -0.01rem;
+    .hdr{
+        width: 100%;
+        height: 2.75rem;
+        background:url('../img/山.png') no-repeat 0 0.6rem,url('../img/云.png') no-repeat 2.1rem -0.5rem;
+        background-size: 100%;
+        position:relative;
+        .navf{
+                  width: 2.69rem;
+        height: 0.58rem;
+        position: absolute;
+        background: url('../img/7日.png')no-repeat;
+        background-size: 100%;
+        top: 0.1rem;
+        left: 0.56rem;  
+        }
+    }
+}
+
+.divs3{
+    width: 100%;
+    height: auto;
+    margin-top:-0.01rem;
+    .header{
+        height: 6rem;
+        padding-top:0.2rem;
+        box-sizing:border-box;
+       .hdr{
+           height: 100%;
+           position:relative;
+           background: url('../img/播放超链接.png') no-repeat;
+           background-size:100%;
+           .btn{
+               width:1.36rem;
+               height:1.36rem;
+               background: url('../img/播放按钮.png') no-repeat;
+               background-size:100% ;
+               position:absolute;
+               left: 0;
+               bottom: 0;
+               top:1.0rem;
+               right:0;
+               margin: auto;
+               a{
+                   display: block;
+                   width: 100%;
+                   height: 100%;
+               }
+           }
+       }
+    }
+}
+
+.divs4{
+    width:100%;
+    height: auto;
+    margin-top: -0.01rem;
+    overflow:hidden;
+    .hdr{
+        position:relative;
+        width:100%;
+        height: 11.57rem;
+        background:url('../img/云-拷贝.png')no-repeat 0 1rem;
+        background-size: 100%;
+        transition:all 0.8s ease;
+        .active{
+            width: 2.24rem;
+            height: 1rem;
+            background:url('../img/VIP福利.png') no-repeat;
+            background-size:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            right: 0;
+            margin:auto;
+            transform: translateY(-100%);
+            opacity:0;
+        }
+        .active2{
+            width:5.84rem;
+            height:2.58rem;
+            background: url('../img/1.png') no-repeat;
+            background-size:100%;
+            position:absolute;
+            right:0;left: 0;top:3rem;
+            margin:auto;
+            transition:all 0.8s ease;
+        }
+        .active3{
+            width:6.07rem;
+            height:2.55rem;
+            background:url('../img/2.png') no-repeat;
+            background-size: 100%;
+            position:absolute;
+            right:0;left: 0;top:5.8rem;
+            margin:auto;
+            transition:all .8s ease;
+        }
+        .active4{
+            width: 6.12rem;
+            height: 2.6rem;
+            background:url('../img/3.png') no-repeat;
+            background-size:100%;
+            position:absolute;
+            left: 0;top:8.5rem;
+            margin: auto;
+        transition: all 0.8s ease;
+        }
+    }
+}
+
+.divs5{
+    width:100%;
+    height:20.75rem;
+    overflow:hidden;
+    margin-top:-0.01rem;
+    margin-bottom: 0.9rem;
+    .backs{
+        width:100%;
+        height:100%;
+        background:url('../img/斜纹条.png') no-repeat 500px 0;
+        background-size:100%;
+        transition:all .8s ease;
+        position:relative;
+        .miji{
+            width:1.7rem;
+            height:0.42rem;
+            background: url('../img/独家秘笈.png') no-repeat;
+            background-size:100%;
+            position:absolute;
+            left: 0;
+            top:0.4rme;
+            right:0;
+            margin:auto;
+        }
+        .jiantou{
+            width:0.33rem;
+            height: 0.42rem;
+            background:url('../img/三角箭头.png') no-repeat;
+            background-size:100%;
+            position:absolute;
+            left:0;top:0.96rem;right:0;
+            margin:auto;
+            transition:all .8s ease;
+        }
+        .kuang{
+            width:6.55rem;
+            height:18.78rem;
+            position:absolute;
+            left:0;right:0;
+            top:1.5rem;
+            margin:auto;
+            background:url('../img/框.png') no-repeat;
+            background-size:100%;
+            .qiang{
+                width:3.2rem;
+                height:1.6rem;
+                background:url('../img/3步.png') no-repeat;
+                background-size:100%;
+                position:absolute;
+                left:-0.03rem;
+                top:-0.01rem;
+            }
+            .step1{
+                width:4.45rem;
+                height:5.12rem;
+                background:url('../img/step1.png') no-repeat;
+                background-size:100%;
+                position:absolute;
+                left:0;
+                right:0;
+                top:2rem;
+                margin:auto;                
+            }
+            .step2{
+                width:4.05rem;height:5.2rem;
+                background:url('../img/step2.png') no-repeat;
+                background-size:100%;
+                position:absolute;
+                left:0;right:0;
+                top:7.5rem;
+                margin:auto;
+            }
+            .step3{
+                width:4.05rem;
+                height:5.17rem;
+                background:url('../img/step3.png') no-repeat;
+                background-size:100%;
+                position:absolute;
+                left:0;
+                right:0;top:13.2rem;margin:auto;
+            }
+        }
+    }
+}
+.divs5.active{
+    .backs{
+        background: url('../img/斜条纹.png') no-repeat 0 -0.13rem;
+        background-size:100%;
+    }
+}
+
+.divs6{
+    width:100%;
+    height: 2rem;
+    background:url('../img/红包.png') no-repeat;
+    background-size: 100%;
+    position:fixed;
+    left:0;
+    bottom:0;
+    .ling{
+        width:2.2rem;
+        height:0.8rem;
+        position:absolute;
+        left:0;
+        top:0.52rem;
+        right: 0;
+        bottom:0;
+        margin:auto;
+        a{
+            display:block;
+           img{
+            width:100%;
+            height: 100%;
+            transition:all .8s ease;
+        } 
+        }
+        
+    }
+    
+}
+.divs6.show{
+    img{
+        transform:scale(1.1,1.1);
+    }
+}
